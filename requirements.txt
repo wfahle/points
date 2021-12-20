@@ -6,3 +6,4 @@ os
 subprocess
 http
 flask.ext.openid
+requests
