@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import os
 import subprocess
 from http.server import BaseHTTPRequestHandler, HTTPServer
