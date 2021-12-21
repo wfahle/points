@@ -1,7 +1,5 @@
-urllib
 datetime
 flask
-os
 subprocess
 http
 flask.ext.openid
