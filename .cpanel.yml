@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/l45y3docldl4/public_html/
+    - /bin/cp WebIO.py $DEPLOYPATH
+    - /bin/cp requirements.txt $DEPLOYPATH
+    - /bin/cp app.py $DEPLOYPATH
+    - /bin/cp testapp.py $DEPLOYPATH
+    - /bin/cp passenger_wsgi.py $DEPLOYPATH
