@@ -5,21 +5,21 @@ from urllib import parse
 from datetime import datetime
 from flask import Flask, request, jsonify
 from flask import g, session
-#from flask.ext.openid import OpenID
+from flask_openid import OpenID
 
 app = Flask(__name__)
-#oid = OpenID(app, '/dev/points/oidpath', safe_roots=[])
+oid = OpenID(app, '/dev/points/oidpath', safe_roots=[])
 
 #unordered list of transactions
 points = [
 ]
 
-#@app.before_request
-#def lookup_current_user():
-#    g.user = None
-#    if 'openid' in session:
-#        openid = session['openid']
-#        g.user = User.query.filter_by(openid=openid).first()
+@app.before_request
+def lookup_current_user():
+    g.user = None
+    if 'openid' in session:
+        openid = session['openid']
+        g.user = User.query.filter_by(openid=openid).first()
 
 @app.get("/clear")
 def clear(): # clear all transactions
